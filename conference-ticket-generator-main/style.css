@@ -39,3 +39,7 @@ input {
   border-radius: 0.5em;
   border: hsl(245, 15%, 58%) solid 2px;
 }
+/* font-size: 72px;
+  background: -webkit-linear-gradient(to right, #eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
