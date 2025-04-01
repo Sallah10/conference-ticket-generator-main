@@ -7,8 +7,9 @@
 body {
   background: url("./assets/images/background-desktop.png");
   color: hsl(0, 0%, 100%);
+  /* position: relative; */
 }
-form,
+/* form,
 h2 {
   color: hsl(245, 15%, 58%);
 }
@@ -39,7 +40,111 @@ input {
   border-radius: 0.5em;
   border: hsl(245, 15%, 58%) solid 2px;
 }
-/* font-size: 72px;
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 72px;
   background: -webkit-linear-gradient(to right, #eee, #333);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
+} */
+/* .container {
+  position: relative;
+  width: max-content;
+}
+img {
+  position: relative;
+}
+.container > span,
+h2 {
+  position: absolute;
+  width: 100%;
+}
+h2 {
+  top: 1;
+  right: 10;
+} */
+.ticket-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* Adjust based on your ticket image size */
+  margin: 0 auto;
+}
+
+.ticket-image {
+  margin-top: 50px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Position header content on top of the ticket image */
+.ticket-header {
+  position: absolute;
+  top: 15%; /* Adjust these values to position correctly on your ticket image */
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 2em;
+  /* align-items: center; */
+}
+
+.ticket-header img {
+  max-width: 130px;
+  height: auto;
+}
+
+.ticket-date {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Position body content on top of the ticket image */
+.ticket-body {
+  position: absolute;
+  bottom: 20%; /* Adjust these values to position correctly on your ticket image */
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.ticket-favicon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.ticket-info {
+  flex: 1;
+}
+
+.ticket-name {
+  margin: 0 0 5px 0;
+  font-size: 22px;
+}
+
+.ticket-github {
+  display: flex;
+  align-items: center;
+}
+
+.ticket-github img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.ticket-github p {
+  margin: 0;
+  font-size: 14px;
+}
