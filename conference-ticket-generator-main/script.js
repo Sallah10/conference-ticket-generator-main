@@ -22,6 +22,13 @@ firstNumber === secondNumber; // false
 firstNumber = secondNumber;	//5
 firstNumber !== secondNumber; // true
 
+function greet(name) {
+    console.log(name);
+}
+
+greet('animate');
+
+
 function checkTrue(firstNumber, secondNumber) {
     return firstNumber === secondNumber;
 }
