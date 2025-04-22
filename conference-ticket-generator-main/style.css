@@ -148,3 +148,40 @@ h2 {
   margin: 0;
   font-size: 14px;
 }
+/* transform: rotate(90deg);
+  transform-origin: left top; */
+/* transform: rotate(-90deg);
+  transform-origin: left bottom; */
+
+@media screen and (max-width: 400px) {
+  .ticket-image {
+    width: 350px;
+  }
+  /* .ticket-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .ticket-header {
+    padding: 0 10px;
+  }
+  .ticket-body {
+    padding: 0 10px;
+  }
+  .ticket-header img {
+    max-width: 80px;
+  } */
+  .ticket-header {
+    gap: 1em;
+  }
+  .ticket-favicon {
+    width: 40px;
+    height: 40px;
+  }
+  .ticket-name {
+    font-size: 18px;
+  }
+  .ticket-github img {
+    width: 14px;
+    height: 14px;
+  }
+}
