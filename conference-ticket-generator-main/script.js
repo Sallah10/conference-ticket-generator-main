@@ -97,3 +97,41 @@ function calculator() {
 
 calculator();
 
+6. Loops
+Goal: Repeat things
+✅ Teach:
+for, while (but keep it simple)
+
+
+📌 Example:
+js
+CopyEdit
+for (let i = 1; i <= 5; i++) {
+  console.log("Count: " + i);
+}
+
+🎮 Fun: Make a countdown from 10 to 1.
+
+7. Arrays
+Goal: Store multiple items in one place
+📌 Example:
+js
+CopyEdit
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits[0]); // apple
+
+🎯 Task: Loop through fruits and print each one.
+
+8. Objects (very basic)
+Goal: Group related info
+📌 Example:
+js
+CopyEdit
+let person = {
+  name: "Ayo",
+  age: 10,
+  isHappy: true
+};
+
+console.log(person.name);
+
