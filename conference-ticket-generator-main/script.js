@@ -60,7 +60,9 @@ else if (age < 65) {
     console.log("You're a senior citizen!");
 }
 
-
+const firstNumber = Number(prompt("Enter the first number:"));
+  const secondNumber = Number(prompt("Enter the second number:"));
+  const operation = prompt("Choose an operation: +, -, *, /");
 
 console.log('your sum of numbers is: ', sum);
 
