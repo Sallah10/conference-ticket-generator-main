@@ -66,3 +66,34 @@ const firstNumber = Number(prompt("Enter the first number:"));
 
 console.log('your sum of numbers is: ', sum);
 
+function calculator() {
+  let result;
+  const firstNumber = Number(prompt("Enter the first number:"));
+  const secondNumber = Number(prompt("Enter the second number:"));
+  const operations = prompt("Choose an operation: +, -, *, /, %");
+
+  if (operations === "*") {
+    result = firstNumber * secondNumber;
+  } else if (operations === "/") {
+    if (secondNumber === 0) {
+      console.log("It is not eligible to divide by zero");
+      return;
+    } else {
+      result = firstNumber / secondNumber;
+    }
+  } else if (operations === "%") {
+    result = firstNumber % secondNumber;
+  } else if (operations === "-") {
+    result = firstNumber - secondNumber;
+  } else if (operations === "+") {
+    result = firstNumber + secondNumber;
+  } else {
+    console.log("Calculator cannot perform this action");
+    return;
+  }
+
+  console.log("Result is: " + result);
+}
+
+calculator();
+
