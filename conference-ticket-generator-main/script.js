@@ -1,66 +1,40 @@
-//Variable
-let abdulssalam = "Azeemat";
-// var abdurrahman = "Abdurrahman";
-abdulssalam = "Abdulssalam";
+function generateTicket() {
+    const form = document.getElementById("form");
+    const nameInput = document.getElementById("name");
+    const gitHub = document.getElementById("Github");
+    // const ticket = document.getElementById("ticket");
+    const ticketName = document.getElementById("ticket-name");
+    const ticketId = document.getElementById("side-digit");
+    const ticketGitHub = document.getElementById("ticket-git-hub");
 
-//constant
-const sonic = "Sonic";
-sonic = "Sonic the Hedgehog";
+    // When the form is submitted
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Stop the page from refreshing
 
-// Data Types:
-// String === text, "string"
-// number== 1, 1.3 
-// boolean == true, false
+        const name = nameInput.value;
 
-// +, -, *, /
-let firstNumber = 10;
-let secondNumber = 5;
-let sum = firstNumber * secondNumber;
-firstNumber % secondNumber;
+        if (name.trim() === "") {
+            alert("Please enter your name.");
+            return;
+        }
 
-firstNumber === secondNumber; // false
-firstNumber = secondNumber;	//5
-firstNumber !== secondNumber; // true
+        // Show the name
+        ticketName.textContent = name;
 
-function greet(name) {
-    console.log(name);
+        // Create a random ticket ID
+        const randomId = "TICKET-" + Math.floor(100000 + Math.random() * 900000);
+
+        // Show the ticket ID
+        ticketId.textContent = randomId;
+
+        ticketGitHub.textContent = gitHub.value;
+        // Show the GitHub link	
+
+        gitHub.value = '';
+        nameInput.value = "";
+    });
 }
-
-greet('animate');
-
-
-function checkTrue(firstNumber, secondNumber) {
-    return firstNumber === secondNumber;
-}
-
-function checkfalse(firstNumber, secondNumber) {
-    return firstNumber !== secondNumber;
-}
-
-function checkequal(firstNumber, secondNumber) {
-    return firstNumber = secondNumber;
-}
-
-greet("Ayo");
-
-if (age < 13) {
-    console.log("You're a kid!");
-} else {
-    console.log("You're a teen or older!");
-}
-
-if (age < 13) {
-    console.log("You're a kid!");
-} else if (age < 20) {
-    console.log("You're a teen!");
-}
-else if (age < 65) {
-    console.log("You're an adult!");
-} else {
-    console.log("You're a senior citizen!");
-}
-
-
-
-console.log('your sum of numbers is: ', sum);
-
+// Show the ticket section
+//   ticket.style.display = "block";
+// Call the function to set everything up
+generateTicket();
