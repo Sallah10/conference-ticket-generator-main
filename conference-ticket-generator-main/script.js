@@ -66,45 +66,39 @@ console.log('your sum of numbers is: ', sum);
 
 function generateTicket() {
     const form = document.getElementById("form");
-    const nameInput = document.getElementById("nameInput");
-    const github = document.getElementById("git-hub");
+    const nameInput = document.getElementById("name");
+    const github = document.getElementById("GitHub");
+    // const email = document.getElementById("emails
 
-    // Get the ticket section and elements
-    //   const ticket = document.getElementById("ticket");
     const ticketGithub = document.getElementById("ticket-git-hub");
-    const ticketName = document.getElementById("ticketName");
-    const ticketId = document.getElementById("ticketId");
+    const ticketName = document.getElementById("ticket-name");
+    const ticketId = document.getElementById("side-digit");
+    // const ticketEmail = document.getElementById("ticket-email"); 
 
-    // When the form is submitted
     form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Stop the page from refreshing
+        e.preventDefault();
 
         const name = nameInput.value;
-
-
+        const gitUser = github.value;
+        // const userEmail = email.value;
 
         if (name.trim() === "") {
             alert("Please enter your name.");
             return;
         }
 
-        // Show the name
         ticketName.textContent = name;
-        ticketGithub.textContent = github.value
+        ticketGithub.textContent = gitUser;
+        ticketId.textContent = Math.floor(1000 + Math.random() * 9000);
+        // if (ticketEmail) ticketEmail.textContent = userEmail;
 
-        // Create a random ticket ID
-        const randomId = "TICKET-" + Math.floor(100000 + Math.random() * 900000);
+        document.getElementById("ticket").style.display = "block";
 
-        // Show the ticket ID
-        ticketId.textContent = randomId;
-
-        // // Show the ticket section
-        // ticket.style.display = "block";
-
-        // Clear the input
+        // Optional: Clear inputs
         nameInput.value = "";
+        github.value = "";
+        // email.value = "";
     });
 }
 
-// Call the function to set everything up
 generateTicket();
